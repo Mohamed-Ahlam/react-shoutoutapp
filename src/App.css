@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    /* basic settings */
+    /* font-size: 16px; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* color: black; */
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    /* above is basic settings */
+    overflow: scroll;
+
+    background-image: url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg");
+    background-position: 0px 0px;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-origin: content-box;
+    font-family: Copperplate, Papyrus, fantasy;
+
+}
+
+header {
+    padding: 60px;
+  text-align: center;
+  /* background: #1abc9c; */
+  font-size: 30px;
+  font-family: Copperplate, Papyrus, fantasy;
+  color: rgb(130, 14, 14);
+
+  white-space: normal;
+  word-wrap: break-word;    
+}
+
+h1{
+    font-size: 50px;
+    font-family: Copperplate, Papyrus, fantasy;
+
+}
+h3{
+    margin-top:70px;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+h2{
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height:400px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap; */
+
+
+    /* width: 400px;
+    height:300px;
+    overflow:hidden;
+    box-shadow: 0 20px 40px -14px black;
+    background-color: #F6C5B7;
+    border-radius: 40px; */
+    font-size: 15px;
+    
+}
+
+.content-text{
+    padding: 10px; 
+    font-size: larger;
+}
