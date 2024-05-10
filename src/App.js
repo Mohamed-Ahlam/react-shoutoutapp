@@ -7,7 +7,7 @@ function App() {
   const [formData, setFormData] = React.useState({name:"", announcement:""})
   const [startDate, setStartDate] = React.useState(new Date());
   
-  const [headerMsg, setHeaderMsg] = React.useState("Input An Announcement")
+  const [headerMsg, setHeaderMsg] = React.useState("Input an Announcement")
 
   const handleChange = (e) => {
     setFormData({...formData,
@@ -25,45 +25,51 @@ function App() {
 
   return (
     <div >
-    
-        <header>
-          <h3>{startDate.toDateString()} ::: {formData.name}</h3>
-          <h1>{headerMsg}</h1>
-        </header>
-        
-        {/* card class */}
-      <main className='container'>
-        <div class="w3-card-4">
-            <div class="w3-container w3-brown">
-              <h2>Input Announcement</h2>
-            </div>
 
-            <form onSubmit={handleSubmit} className="w3-container" >
-              <label htmlFor="name" className='content-text w3-text-brown' placeholder="Your name..">
+  <header>
+    <div className="header">
+      <img src="/flower.jpg" alt=""></img>
+
+        <div className="header-right">
+        <a>{startDate.toDateString()}</a>
+        <a>{formData.name}</a>
+        </div>
+
+        <div className="main-heading">
+          <h1>{headerMsg}</h1>
+        </div>
+     
+    </div>
+  </header>
+
+      
+      <main className='container'>
+       
+            <form onSubmit={handleSubmit}>
+              <label htmlFor="name" className='content-text w3-text-blue' placeholder="Your name..">
                 <b> Input Name</b>
                 </label>
-              <input className="w3-input w3-border w3-sand"type="text" id="name" name="name" value={formData.name} onChange={handleChange}></input>
+              <input className="w3-input w3-border"type="text" id="name" name="name" value={formData.name} onChange={handleChange}></input>
 
 
-              <label htmlFor="theDate" className='content-text w3-text-brown'>
+              <label htmlFor="theDate" className='content-text w3-text-blue'>
                 <b>Input date</b>
                 </label>
               <DatePicker
                 label="Controlled picker"
                 selected={startDate}
                 onChange={(newValue) => setStartDate(newValue)}
-                className="w3-input w3-border w3-sand"
+                className="w3-input w3-border"
                 id="theDate"
               />
-              <label htmlFor="msg" className='content-text w3-text-brown'>
+              <label htmlFor="msg" className='content-text w3-text-blue'>
                 <b>Input Announcement Message</b>
                 </label>
-              <textarea className="w3-input w3-border w3-sand" type="text" id="msg" name="announcement" value={formData.announcement} onChange={handleChange} placeholder="Write an announcement.." style={{height:"100px"}}></textarea>
+              <textarea className="w3-input w3-border" type="text" id="msg" name="announcement" value={formData.announcement} onChange={handleChange} placeholder="Write an announcement.." style={{height:"100px"}}></textarea>
 
-              <button class="w3-btn w3-brown" type="submit"  name="announcement" value={formData.announcement}>Submit</button>
+              <button class="w3-btn w3-blue" type="submit"  name="announcement" value={formData.announcement}>Submit</button>
             </form>
-        </div>
-        
+
       </main>
   
     
